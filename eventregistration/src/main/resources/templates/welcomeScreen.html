@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to InfoPass Gen</title>
+</head>
+<body>
+    <h1>Welcome to InfoPass Gen</h1>
+    <p>Participant Details:</p>
+    <p>Full Name: <span th:text="${participant.firstName + ' ' + participant.middleName + ' ' + participant.lastName}"></span></p>
+    <p>Date of Birth: <span th:text="${participant.dob}"></span></p>
+    <p>College Address: <span th:text="${participant.collegeAddress}"></span></p>
+    <p>Generated Password: <span th:text="${participant.generatedPassword}"></span></p>
+</body>
+</html>

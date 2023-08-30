@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>InfoPass Gen Registration</title>
+</head>
+<body>
+    <h1>InfoPass Gen Registration</h1>
+    <form th:action="@{/register}" th:object="${participant}" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" name="middleName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="collegeAddress">College Address:</label>
+        <textarea id="collegeAddress" name="collegeAddress" required></textarea><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

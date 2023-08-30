@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Participants</title>
+</head>
+<body>
+    <h1>All Participants</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>College Address</th>
+                <th>Generated Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="participant : ${participants}">
+                <td th:text="${participant.id}"></td>
+                <td th:text="${participant.firstName}"></td>
+                <td th:text="${participant.middleName}"></td>
+                <td th:text="${participant.lastName}"></td>
+                <td th:text="${participant.dob}"></td>
+                <td th:text="${participant.collegeAddress}"></td>
+                <td th:text="${participant.generatedPassword}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
